@@ -1,0 +1,484 @@
+*{ /* Reinicia márgenes y paddings de todos los elementos */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{ /* Estilos generales del body */
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(to bottom, #f1f5f9, #dbeafe);
+    color: #111827;
+    transition: 0.3s;
+}
+
+body.oscuro{ /* Estilos del modo oscuro */
+    background: linear-gradient(to bottom, #0f172a, #020617);
+    color: white;
+}
+header{ /* Encabezado principal */
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(10px);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+body.oscuro header{ /* Header en modo oscuro */ 
+    background: rgba(15,23,42,0.8);
+}
+nav{ /* Navegación */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap: 30px;
+    flex-wrap: nowrap;
+}
+
+nav a{ /* Links del menú */
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: 0.3s;
+    position: relative;
+    font-size: 20px;
+}
+
+nav a::after{ /* Línea animada debajo de los links */
+    content:"";
+    position:absolute;
+    width:0%;
+    height:2px;
+    background:#3b82f6;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+}
+
+nav a:hover::after{ /* Animación al pasar el mouse */
+    width:100%;
+}
+
+body.oscuro nav a{ /* Color de links en modo oscuro */
+    color: white;
+}
+
+section{ /* Estilos generales de las secciones */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+img{ /* Estilos generales de las imágenes */
+    margin-bottom: 30px; 
+    width: 350px;
+    margin-top: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    border:4px solid #3b82f6;
+    box-shadow: 0 0 25px rgba(59,130,246,0.4);
+}
+.logo{ /* Logo sin bordes redondeados */
+    border-radius: 0;
+}
+.fotopython{  /* Imagen de Python sin bordes redondeados */
+    width: 450px;
+    margin-top: 20px;
+    border-radius: 0;
+}
+#inicio{ /* Estilos específicos de la sección de inicio */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cv{ /* Estilos del botón de CV */
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 15px;
+}
+
+.foto-perfil:hover{ /* Animación al pasar el mouse sobre la foto de perfil */
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+.foto-dev{  /* Estilos de la foto animación de aparición desde la derecha */
+    width: 350px;
+    height: 400px;
+    margin-top: -40px;
+    position: absolute;
+    right: 150px;
+    top: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    opacity: 0;
+    transform: translateX(300px);
+
+}
+.animar-foto{
+    animation: aparecerDerecha 2s ease forwards;
+} 
+
+@keyframes aparecerDerecha { /* Animación para que la foto aparezca desde la derecha */
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.tarjeta{ /* Estilos generales de las tarjetas */
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 25px;
+    border:1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+.tarjeta:hover{ /* Animación al pasar el mouse sobre las tarjetas */
+    transform: translateY(-5px);
+}
+
+body.oscuro .tarjeta{ /* Estilos de las tarjetas en modo oscuro */
+    background: rgba(30,41,59,0.7);
+}
+
+button{ /* Estilos generales de los botones */
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 10px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg,#3b82f6,#2563eb);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+body.oscuro button{ /* Estilos de los botones en modo oscuro */
+    background-color: #00bfff;
+}
+
+button:hover{ /* Animación al pasar el mouse sobre los botones */
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(59,130,246,0.4);
+}
+
+body.oscuro button:hover{ /* Animación de los botones en modo oscuro */
+    background-color: #0080aa;
+}
+.botones-redes{ /* Contenedor de los botones de redes sociales */
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.botones-redes a{ /* Estilos de los enlaces de redes sociales */
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+body.oscuro .botones-redes a{ /* Estilos de los enlaces de redes sociales en modo oscuro */
+    background-color: #00bfff;
+}
+
+.botones-redes a:hover{ /* Animación al pasar el mouse sobre los enlaces de redes sociales */
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+body.oscuro .botones-redes a:hover{ /* Animación de los enlaces de redes sociales en modo oscuro */
+    background-color: #0080aa;
+}
+
+@media (max-width: 768px) { /* Estilos para pantallas pequeñas */
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    nav {
+        display:none;
+        margin-top: 10px;
+    }
+
+    nav a {
+        margin: 0 10px;
+        display: inline-block;
+    }
+
+    section {
+        padding: 40px 10px;
+    }
+
+    img {
+        width: 200px;
+    }
+
+    .tarjeta {
+        width: 90%;
+        padding: 15px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .botones-redes {
+        gap: 10px;
+    }
+
+    .botones-redes a {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    .foto-dev{ /* Ajustes de la foto animación para pantallas pequeñas */
+    position: static;
+    width: 200px;
+    margin-top: 30px;
+    transform: none;
+    opacity: 1;
+    animation: none;
+}
+}
+
+#sobre-mi{ /* Estilos para la sección "Sobre mí" */
+    padding: 60px 20px;
+}
+
+#sobre-mi h2{ /* Estilos para el título de la sección "Sobre mí" */
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.profile-info{ /* Estilos para el contenedor de la información del perfil */
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    background-color: lightgray;
+    padding: 40px;
+    border-radius: 20px;
+    line-height: 1.8;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+body.oscuro .profile-info{ /* Estilos para el contenedor de la información del perfil en modo oscuro */
+    background-color: #222;
+}
+
+.profile-info h1{  /* Estilos para el título principal dentro de la sección "Sobre mí" */
+    margin-bottom: 20px;
+}
+
+.profile-info h3{ /* Estilos para los subtítulos dentro de la sección "Sobre mí" */
+    margin-top: 25px;
+    color: #007bff;
+}
+
+.profile-info p{ /* Estilos para los párrafos dentro de la sección "Sobre mí" */
+    margin-top: 10px;
+}
+
+.profile-info ul{ /* Estilos para las listas dentro de la sección "Sobre mí" */
+    list-style: none;
+    padding-left: 0;
+}
+
+.profile-info li{ /* Estilos para los elementos de las listas dentro de la sección "Sobre mí" */
+    margin: 10px 0;
+}
+#contacto{ /* Estilos para la sección de contacto */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form{ /* Estilos para el formulario de contacto */
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 10px;
+}
+#skills{ /* Estilos para la sección de habilidades */
+    width: 100%;
+    padding: 50px 0;
+    background-color: #222;
+    text-align: center;
+}
+
+#skills h2{ /* Estilos para el título de la sección de habilidades */
+    color: white;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.slider{ /* Contenedor del slider de logos de tecnologías */
+    width:100%;
+    overflow:hidden;
+    position:relative;
+    padding:20px 0;
+}
+
+.slide{ /* Contenedor de las imágenes dentro del slider */
+    display:flex;
+    align-items:center;
+    gap:60px;
+    width:max-content;
+    animation: scroll 25s linear infinite;
+}
+
+.slide img{ /* Estilos para las imágenes dentro del slider */
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    transition:0.3s;
+}
+
+.slide img:hover{ /* Animación al pasar el mouse sobre las imágenes del slider */
+    transform:scale(1.2);
+}
+
+@keyframes scroll{ /* Animación para que las imágenes del slider se desplacen de derecha a izquierda */
+
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-50%);
+    }
+
+}
+
+.btn-arriba{ /* Estilos para el botón de volver arriba */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #00bfff;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 25px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    transition: 0.3s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.btn-arriba.mostrar{ /* Estilos para mostrar el botón de volver arriba */
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.btn-arriba:hover{ /* Animación al pasar el mouse sobre el botón de volver arriba */
+    transform: scale(1.1);
+}
+
+html{       
+    scroll-behavior: smooth; 
+}
+#proyectos{ /* Estilos para la sección de proyectos */
+    padding:80px 20px;
+}
+
+.contenedor-proyectos{ /* Contenedor de las tarjetas de proyectos */
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.tarjeta-proyecto{ /* Estilos para las tarjetas de proyectos */
+    width:100%;
+    max-width: 350px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+    transition:0.4s;
+    text-align:left;
+}
+
+.tarjeta-proyecto:hover{ /* Animación al pasar el mouse sobre las tarjetas de proyectos */
+    transform:translateY(-10px);
+}
+
+.tarjeta-proyecto img{ /* Estilos para las imágenes dentro de las tarjetas de proyectos */
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:0;
+}
+
+.tarjeta-proyecto h3{ /* Estilos para los títulos dentro de las tarjetas de proyectos */
+    padding:20px 20px 10px;
+    font-size:24px;
+}
+
+.tarjeta-proyecto p{ /* Estilos para los párrafos dentro de las tarjetas de proyectos */
+    padding:0 20px;
+    line-height:1.6;
+    color:#d1d5db;
+}
+
+.tarjeta-proyecto a{ /* Estilos para los enlaces dentro de las tarjetas de proyectos */
+    display:inline-block;
+    margin:20px;
+    padding:12px 20px;
+    background:linear-gradient(135deg,#3b82f6,#2563eb);
+    color:white;
+    text-decoration:none;
+    border-radius:12px;
+    transition:0.3s;
+    font-weight:bold;
+}
+
+.tarjeta-proyecto a:hover{ /* Animación al pasar el mouse sobre los enlaces dentro de las tarjetas de proyectos */
+    transform:scale(1.05);
+    box-shadow:0 10px 20px rgba(59,130,246,0.4);
+}
+.profile-info p{ /* Estilos para los párrafos dentro del contenedor de información del perfil */
+    margin-top:15px;
+    line-height:1.6;
+    font-size:17px;
+}
+
+.profile-info h1{ /* Estilos para el título principal dentro del contenedor de información del perfil */
+    margin-bottom:25px;
+}
+#loader{ /* Estilos para el loader de carga */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #020617;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    color: white;
+    font-size: 20px;
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración de caracteres y responsive -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio dev Gg</title> <!-- Título de la página -->
+    <link rel="icon" href="imagenes/developer.ico" type="image/x-icon"> <!-- Icono de la página -->
+    <link rel="stylesheet" href="estilo.css"> <!-- archivo css conexion -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Preconexión para optimizar carga de fuentes -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Fuente personalizada -->
+</head>
+<body>
+    <div id="loader"> <!-- Contenedor para el loader de carga -->
+
+    <h1>Cargando Portfolio...</h1>
+
+</div>
+   <body id="top">
+    <body class="oscuro"></body>
+    <header>
+       <!-- Encabezado principal -->
+        <h1>Gaston Garanton</h1> <!-- nombre personal -->
+        <nav> <!-- barra de navegación -->
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <button id="tema-btn" onclick="cambiarTema()"> ☀️ </button> <!-- Botón para cambiar tema -->
+    </header>
+
+    <section id="inicio"> <!-- Sección de inicio -->
+      <h2>Hola, soy Gaston</h2>
+      <p>Estudiante de programación y desarrollo web.</p>
+      <img src="imagenes/fotoperfil.png" alt="Foto perfil" class="foto-perfil"> <!-- Foto de perfil -->
+      <img src="imagenes/developer.png" alt="Foto developer" class="foto-dev"> <!-- Foto de desarrollo -->
+      
+      <button id="cv" onclick="descargarCV()">Descargar CV</button> <!-- Botón para descargar CV -->
+   </section>
+   
+
+    <section id="sobre-mi"> <!-- Sección sobre mí -->
+        <h2>Sobre mí</h2>
+        <div class="profile-info">
+            <h1>Hola 👋, mi nombre es Gaston Garanton</h1>
+            <p>
+            Me apasiona la tecnología y el desarrollo de software.
+            Actualmente estudio 🎓 programación y análisis de datos.
+            </p>
+            <p>
+            🔍 Estudiante de Tecnicatura Universitaria en Programación - UTN |
+            Analista de Datos - UBA
+            </p>
+            <p>
+                💻 Desarrollador Python con experiencia en Pandas, Matplotlib,
+                NumPy, Tkinter y Flask.
+            </p>
+            <p>
+                🗄️ Bases de Datos: SQL Server, MySQL y MariaDB.
+            </p>
+            <p>
+                🌐 Tecnologías Web: HTML, CSS, JavaScript y Bootstrap.
+            </p>
+            <p>
+                🛠️ Técnico en Computación especializado en armado,
+                reparación y mantenimiento de computadoras.
+            </p>
+        </div>
+    </section>
+
+    <section id="proyectos"> <!-- Sección de proyectos -->
+    <h2>Mis proyectos</h2>
+    <div class="contenedor-proyectos"> <!-- Contenedor para las tarjetas de proyectos -->
+        <div class="tarjeta-proyecto">
+            <img src="imagenes/catalogop.png" alt="Catálogo de películas"> <!-- Imagen del proyecto -->
+            <h3>Catálogo de películas</h3>
+            <p>
+                Aplicación desarrollada con Python y Tkinter para gestionar películas. base de datos SQLite.
+                Permite agregar, editar y eliminar registros incluyendo nombre,
+                duración y género.
+            </p>
+            <a href="https://github.com/rusogas/catalogo_peliculas" target="_blank"> <!-- Enlace al proyecto en GitHub -->
+                Ver proyecto
+            </a>
+        </div>
+
+        <div class="tarjeta-proyecto"> <!-- Segunda tarjeta de proyecto -->
+            <img src="imagenes/python.jpg" alt="Flask"> <!-- Imagen del proyecto -->
+            <h3>App Flask - Tableros</h3>
+            <p>
+                Aplicación web desarrollada con Flask, Python, HTML y CSS.
+                Permite analizar datos y mostrar gráficos interactivos utilizando
+                Matplotlib.
+            </p>
+            <a href="https://github.com/rusogas/flask-tableros" target="_blank"> <!-- Enlace al proyecto en GitHub -->
+                Ver proyecto
+            </a>
+        </div>
+
+        <div class="tarjeta-proyecto"> <!-- Tercera tarjeta de proyecto -->
+            <img src="imagenes/analisisdatos.png" alt="Análisis de datos"> <!-- Imagen del proyecto -->
+            <h3>Análisis de datos</h3>
+            <p>
+               Portfolio desarrollado con Python, Flask, MySQL, HTML, CSS y Bootstrap.
+                El proyecto incluye un sistema de análisis de datos realizado en Python
+                 utilizando librerías como Pandas, NumPy y Matplotlib para procesar,
+                 analizar y visualizar estadísticas mediante gráficos interactivos
+                y tableros dinámicos.
+            </p>
+            <a href="https://devgaston-g.vercel.app/blog.html" target="_blank"> <!-- Enlace al proyecto en Vercel -->
+                Ver proyecto
+            </a>
+        </div>
+    </div>
+
+</section>
+    <section id="skills"> <!-- Sección de habilidades -->
+    <h2>Mis Tecnologías</h2>
+    <article class="slider"> <!-- Contenedor para el slider de tecnologías -->
+        <div class="slide">    
+            <img src="/imagenes/python.png" alt="Python">
+            <img src="/imagenes/js.png" alt="JavaScript">
+            <img src="/imagenes/html.png" alt="HTML">
+            <img src="/imagenes/css.png" alt="CSS">
+            <img src="/imagenes/git.png" alt="Git">
+            <img src="/imagenes/github.jpg" alt="GitHub">
+            <img src="/imagenes/sql.png" alt="MySQL">
+            <img src="/imagenes/jupyter.png" alt="Jupyter">
+            <img src="/imagenes/python.png" alt="Python">
+            <img src="/imagenes/js.png" alt="JavaScript">
+            <img src="/imagenes/html.png" alt="HTML">
+            <img src="/imagenes/css.png" alt="CSS">
+            <img src="/imagenes/git.png" alt="Git">
+            <img src="/imagenes/github.jpg" alt="GitHub">
+            <img src="/imagenes/sql.png" alt="MySQL">
+            <img src="/imagenes/jupyter.png" alt="Jupyter">
+            <img src="/imagenes/python.png" alt="Python">
+            <img src="/imagenes/js.png" alt="JavaScript">
+            <img src="/imagenes/html.png" alt="HTML">
+            <img src="/imagenes/css.png" alt="CSS"> 
+            <img src="/imagenes/git.png" alt="Git">
+            <img src="/imagenes/github.jpg" alt="GitHub">
+            <img src="/imagenes/sql.png" alt="MySQL">
+        </div>
+    </article>
+
+</section>
+    <section id="contacto"> <!-- Sección de contacto -->
+      <h2>Contacto</h2> <!-- Título de la sección de contacto -->
+       <form action="mailto:gastonruso077@gmail.com" method="post" enctype="text/plain"> <!-- Formulario de contacto -->
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        <button type="submit">Enviar mensaje</button>
+       </form>
+    </section>
+
+    <section id="redes"> <!-- Sección de redes sociales -->
+       <h2>Mis redes</h2>
+     <div class="botones-redes"> <!-- Contenedor para los botones de redes sociales -->
+         <a href="https://github.com/rusogas" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+         </a>
+         <a href="https://www.linkedin.com/in/gaston-garanton-b1828b292" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+         </a>
+         <a href="https://wa.me/5493484399596" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+         </a>
+         <a href="https://instagram.com/gaston_077" target="_blank">
+           <i class="fab fa-instagram"></i> Instagram
+         </a>
+      </div>
+  </section>
+  
+  <a href="#top" class="btn-arriba" id="btnArriba">↑</a> <!-- Botón para subir al inicio -->
+  <script src="script.js"></script> <!-- Archivo JavaScript para funcionalidades adicionales -->
+</body>
+</html>
